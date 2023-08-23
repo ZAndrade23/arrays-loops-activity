@@ -5,9 +5,16 @@
  * 2. Write a loop that logs out each hobby
  * 3. After the loop, log out the total number of
  *    hobbies
- */
-
-
+ */let hobbies = ['travel','gardening', 'sports'];
+console.log(hobbies);
+console.table(hobbies);
+for(hobby of hobbies){
+    console.log('current hobby', hobby);
+}
+let hobbiesList = document.querySelector('#hobby-list');
+for( let hobby of hobbies) {
+    console.log('hobbies: ', hobby);
+}console.log('Total hobbies', hobbies.length);
 // Example output
 // 1. swimming
 // 2. board games
@@ -23,8 +30,16 @@
  * 3. Write a loop that counts the number of times teal 
  *    is in the array
  * 4. Output the array and number of times teal was found
- */
-
+ */let colors = ['red' , 'teal' , 'green', 'white', 'teal'];
+ 
+ let tealCount = 0;
+ for(let item of colors){
+    console.log(item);
+    if(item === 'teal') {
+        tealCount+= 1;
+    }
+ }
+console.log('teal count: ', tealCount);
 
 // Example output
 // green, red, teal, orange, teal
@@ -90,8 +105,17 @@
  *    greatest position distance for that array is 3.
  * 3. Output the array and its greatest position distance
  */
+let largeArray = [0, 2, 2, 7, 4, 1, 7, 8];
+let counters = [];
 
-
+for(let item of largeArray) {
+    if(counters[item] >= 0) {
+counters[item] += 1;
+    } else {
+        counters[item] = 1
+    }
+}
+console.table(counters);
 // Example output
 // 5, 1, 8, 2, 9, 1, 4, 5, 0
 // Greatest Position Distance: 7
