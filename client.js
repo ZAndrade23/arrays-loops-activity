@@ -55,7 +55,12 @@ console.log('teal count: ', tealCount);
  *    array and even numbers in the evenNumbers array.
  * 4. Output the original array, odd number array and even number array
  */
-
+let numbers = [1, 4, 7, 10, 12, 13];
+let oddNumbers = [];
+let evenNumbers = [];
+for(let item of numbers) {
+    console.log(item);
+}
 
 // Example output
 // 3, 7, 2, 8, 11, 4, 2
